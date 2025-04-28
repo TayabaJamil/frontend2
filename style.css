@@ -1,0 +1,224 @@
+
+        /* Custom animations for navbar */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #A31D1D;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: #A31D1D;
+        }
+        /* Hero background animation */
+        .hero-bg {
+            background: linear-gradient(45deg, #FEF9E1, #E5D0AC, #6D2323, #A31D1D);
+            background-size: 400%;
+            animation: colorShift 15s ease infinite;
+        }
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Hero text animation */
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Button hover animation */
+        .action-btn {
+            transition: all 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Best-seller section animations */
+        .bestseller-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .bestseller-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .bestseller-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .bestseller-image {
+            transition: transform 0.5s ease;
+        }
+        .bestseller-card:hover .bestseller-image {
+            transform: scale(1.05);
+        }
+        /* Testimonial section animations */
+        .testimonial-card {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        /* Carousel slide animation */
+        .carousel-item {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .carousel-item.hidden {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        .carousel-item.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* About Us section animations */
+        .about-content, .about-image {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .about-content.visible, .about-image.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+            transition: color 0.3s ease;
+        }
+        .about-text:hover {
+            color: #A31D1D;
+        }
+        /* Newsletter section animations */
+        .newsletter-content {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .newsletter-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .subscribe-button {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .subscribe-button:hover {
+            transform: translateY(-3px);
+            background-color: #6D2323;
+        }
+        .email-input {
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .email-input:focus {
+            border-color: #A31D1D;
+            box-shadow: 0 0 0 3px rgba(163, 29, 29, 0.1);
+        }
+        /* Footer section animations */
+        .footer-column {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .footer-column.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .footer-link, .social-icon {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .footer-link:hover, .social-icon:hover {
+            color: #A31D1D;
+            transform: translateY(-2px);
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+         /* Responsive Adjustments */
+         @media (max-width: 768px) {
+            /* Navbar */
+            .nav-link {
+                font-size: 0.9rem;
+            }
+            /* Hero Section */
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .action-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            /* Collections */
+            .collection-image {
+                height: 12rem;
+            }
+            /* Best-Sellers */
+            .bestseller-image {
+                height: 10rem;
+            }
+            /* Testimonials */
+            .carousel-item {
+                width: 90%;
+                margin: 0 auto;
+            }
+            /* About Us */
+            .about-content h3 {
+                font-size: 1.5rem;
+            }
+            .about-content p {
+                font-size: 0.9rem;
+            }
+            .about-image img {
+                height: 18rem;
+            }
+            /* Newsletter */
+            .email-input {
+                font-size: 0.9rem;
+                padding: 0.75rem;
+            }
+            .subscribe-button {
+                font-size: 0.9rem;
+                padding: 0.75rem 1.5rem;
+            }
+            /* Footer */
+            .footer-column h3 {
+                font-size: 1.25rem;
+            }
+            .footer-column p, .footer-column a {
+                font-size: 0.9rem;
+            }
+        }
+    
